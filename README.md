@@ -1,5 +1,6 @@
 # Ultimate-DNSAmp
-A basic guide to perform DNS amplification.
+A basic guide to simulate DNS amplification.
+
 ![image](https://github.com/user-attachments/assets/e84574cb-f96e-4813-96ce-e6b5cc892e11)
 
 # Disclaimer
