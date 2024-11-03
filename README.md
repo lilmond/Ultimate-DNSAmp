@@ -79,8 +79,7 @@ DNS amplification attacks exploit the design of DNS and the openness of many DNS
 Let's get started by installing the basic components for performing a DNS amplification attack. Please follow the steps below.
 
 ## 1. Create a directory:
-```
-bash
+```bash
 mkdir dnsamp
 cd ./dnsamp
 ```
@@ -93,8 +92,7 @@ pip install scapy
 ```
 
 ## 3. Download the required files:
-```
-bash
+```bash
 curl https://raw.githubusercontent.com/lilmond/Ultimate-DNSAmp/refs/heads/main/dnsamp.py > dnsamp.py
 curl https://raw.githubusercontent.com/lilmond/Nameservers_50k/refs/heads/main/nameservers_50k.txt > nameservers_50k.txt
 ```
@@ -110,8 +108,7 @@ However, if you're configuring a lab environment or have a legitimate reason for
 Linux has a built-in mechanism called reverse path filtering that prevents spoofed packets by ensuring that incoming packets on an interface have a source IP address reachable through that same interface. To allow spoofed packets, you need to disable this filtering.
 
 To disable reverse path filtering, you can run:
-```
-bash
+```bash
 # Disable reverse path filtering
 echo 0 | sudo tee /proc/sys/net/ipv4/conf/all/rp_filter
 ```
@@ -126,8 +123,7 @@ net.ipv4.conf.eth0.rp_filter = 0  # Replace eth0 with your interface
 
 Then apply the changes with:
 
-```
-bash
+```bash
 sudo sysctl -p
 ```
 
