@@ -19,21 +19,21 @@ Thank you for using this repository responsibly and for contributing to a safer,
 
 A DNS amplification attack is a type of Distributed Denial of Service (DDoS) attack where attackers exploit open DNS resolvers to overwhelm a target system or network with a massive amount of traffic. This attack takes advantage of the fact that DNS queries can be very small, but the responses can be significantly larger. By "amplifying" the amount of data sent to a victim, attackers can magnify their impact without needing a large amount of resources.
 
-Here’s how a DNS amplification attack works:
+## Here’s how a DNS amplification attack works:
 
-1. Choosing Open DNS Resolvers
+### 1. Choosing Open DNS Resolvers
 
 Attackers look for open DNS resolvers—DNS servers that respond to queries from any IP address, not just those on a specific network. Many DNS servers are intentionally configured as open resolvers for public access, but they can be exploited if not properly secured.
 
-2. Crafting Spoofed DNS Requests
+### 2. Crafting Spoofed DNS Requests
 
 The attacker crafts a DNS request that has a spoofed source IP address—specifically, the IP address of the intended victim. When the DNS resolver receives the request, it thinks it came from the victim’s IP address.
 
-3. Sending Small Queries with Large Responses
+### 3. Sending Small Queries with Large Responses
 
 The attacker sends small DNS queries to the open DNS resolvers. These queries are crafted to return large responses (usually by requesting information about DNS records with lots of data, such as the ANY record type). For example, a 60-byte DNS query could produce a 4,000-byte response, resulting in an amplification factor of about 70 times.
 
-4. Amplifying Traffic to Overwhelm the Victim
+### 4. Amplifying Traffic to Overwhelm the Victim
 
 Since the DNS requests are sent with the victim’s IP address, the open DNS resolvers send the large DNS responses directly to the victim’s server or network. Because multiple DNS resolvers are often used, this can result in massive volumes of traffic directed at the victim in a very short time.
 
