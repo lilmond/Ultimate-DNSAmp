@@ -97,7 +97,7 @@ curl https://raw.githubusercontent.com/lilmond/Ultimate-DNSAmp/refs/heads/main/d
 curl https://raw.githubusercontent.com/lilmond/Nameservers_50k/refs/heads/main/nameservers_50k.txt > nameservers_50k.txt
 ```
 
-## 4. Set up the firewall in your server. This is important to allow IP spoofing in your network. Please note that this doesn't work for every server.
+## 4. Set up the firewall in your server. This is important to allow IP spoofing in your network. Please note that this doesn't work for all types of devices, so I recommend using a dedicated server.
 
 Enabling spoofed packets is generally not recommended, as spoofing refers to forging the source IP address of packets, which is commonly associated with malicious activities (e.g., DDoS attacks, man-in-the-middle attacks). Allowing or enabling spoofed packets can also lead to network security vulnerabilities and routing issues.
 
